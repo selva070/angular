@@ -1,17 +1,9 @@
 #.travis.yml
 
 language: node_js
-node_js:
-  - "8.9.1"
-
 branches:
   only:
     - master
-
-before_script:
-  - npm install -g firebase-tools
-  - npm install -g @angular/cli
-
 script:
   - ng build --prod
 
@@ -22,5 +14,5 @@ notifications:
   email:
     recipients:
       - me@selva070.me
-    on_success: never # default: change
+    on_success: always # default: change
     on_failure: always # default: always
