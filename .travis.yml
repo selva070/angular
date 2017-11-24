@@ -20,5 +20,7 @@ after_success:
 
 notifications:
   email:
-    on_failure: change
-    on_success: change
+    recipients:
+      - me@selva070.me
+    on_success: never # default: change
+    on_failure: always # default: always
